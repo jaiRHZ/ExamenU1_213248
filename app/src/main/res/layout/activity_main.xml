@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="@string/title"
+        android:textAlignment="center"
+        android:textSize="28dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtCelsius"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="222dp"
+        android:text="@string/celsiusUnit"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/txtKelvin"
+        app:layout_constraintStart_toStartOf="@+id/txtFarenheit"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtFarenheit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:text="@string/farenheitUnit"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/txtKelvin"
+        app:layout_constraintStart_toStartOf="@+id/txtKelvin"
+        app:layout_constraintTop_toBottomOf="@+id/txtCelsius" />
+
+    <TextView
+        android:id="@+id/txtKelvin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:layout_marginBottom="41dp"
+        android:text="@string/kelvinUnit"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnGC"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/etC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="204dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="@+id/txtTitle"
+        app:layout_constraintStart_toStartOf="@+id/etK"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="46dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etF" />
+
+    <EditText
+        android:id="@+id/etF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="@+id/etC"
+        app:layout_constraintTop_toBottomOf="@+id/etC" />
+
+    <Button
+        android:id="@+id/btnGC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:text="@string/celsiusUnit"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnGF"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnGF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="41dp"
+        android:text="@string/farenheitUnit"
+        app:layout_constraintStart_toEndOf="@+id/btnGC"
+        app:layout_constraintTop_toBottomOf="@+id/etK" />
+
+    <Button
+        android:id="@+id/btnGK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="27dp"
+        android:text="@string/kelvinUnit"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnGF"
+        app:layout_constraintStart_toEndOf="@+id/btnGF" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

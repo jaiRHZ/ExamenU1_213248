@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ExamenU1</string>
+
+    <string name="title">Convertidor de Unidades \nTermicas</string>
+
+    <!-- Buttons-->
+    <string name="celsiusUnit">ºC</string>
+    <string name="farenheitUnit">ºF</string>
+    <string name="kelvinUnit">ºK</string>
+
+</resources>
